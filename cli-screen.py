@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 # -.-coding=UTF8 -.-
+""" generates a Screen object where strings can be displayed"""
+
 #
 #
 #  cli-screen
