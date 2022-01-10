@@ -1,18 +1,15 @@
 #!/usr/bin/env python3
 # -.-coding=UTF8 -.-
-""" generates a Screen object where strings can be displayed"""
+""" generates a Screen object where strings can be displayed
 
-#
-#
-#  cli-screen
-#
-# created Jan. 6th, 2022
-#
-#
-# A tool to define a virtual text screen on the command line
-#
-# uses xterm commands!!
-#
+            cli-screen
+
+created Jan. 6th, 2022
+
+A tool to define a virtual text screen on the command line
+
+ uses xterm commands!!
+"""
 
 
 
