@@ -4,11 +4,11 @@
 
             cli-screen
 
-created Jan. 6th, 2022
+small script, created Jan. 6th, 2022
 
 A tool to define a virtual text screen on the command line
 
- uses xterm commands!!
+ uses xterm commands...
 """
 
 
