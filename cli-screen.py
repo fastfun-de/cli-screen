@@ -9,7 +9,7 @@
 #
 # A tool to define a virtual text screen on the command line
 #
-# TODO: DOES NOT WORK in ANSI , use xterm commandS!!
+# uses xterm commands!!
 #
 
 
@@ -17,7 +17,7 @@
 class Screen:
 
 
-    def __init__(self, x, y,fill ="µ"):
+    def __init__(self, x, y,fill ="#"):
         assert  0 < x <200
         assert  0 < y <50
         self.x = x
@@ -30,6 +30,7 @@ class Screen:
         #self.array=[self.array]*self.y
     
     def display(self):
+        """show Screen object"""
         escape=""
         up ="\033[A"
         for ydir in range(self.y):
@@ -44,6 +45,7 @@ class Screen:
        
     
     def end(self):
+        """moves Cursor below the Screen object"""
         escape =""
         for ydir in range(self.y+1):
             escape +="\033[B"
@@ -51,11 +53,13 @@ class Screen:
         
 
     def printonecharat(self,qx,qy,fill="."):
+        """ just put one char at a specific location """
         #print (self.array)
         self.array[qy][qx]=fill
         #print (self.array)0
         
     def printstringat(self,qx,qy,printstring ,width=8, fill=" "):
+        """ fills a width - long 1 line place """
         fills = fill * width
         printstring = printstring +fills
 
@@ -67,13 +71,13 @@ class Screen:
 
 
 if __name__ == '__main__':
-    hallo = Screen(60,5,"*")
-    hallo.display()
-    hallo.printonecharat(9,0,"a")
-    hallo.display()
-    hallo.printstringat(58,2,"12345")
-    hallo.display()
-    hallo.end()
+    display = Screen(60,5,"*")
+    display.display()
+    display.printonecharat(9,0,"a")
+    display.display()
+    display.printstringat(58,2,"12345")
+    display.display()
+    display.end()
 
 
 
