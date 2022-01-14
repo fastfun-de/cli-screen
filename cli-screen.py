@@ -14,7 +14,9 @@ A tool to define a virtual text screen on the command line
 
 
 class Screen:
-
+    '''a rectangular display field to write on - 
+    a simple print at method to display things
+    dynamically on the screen without dependencies'''
 
     def __init__(self, x, y,fill ="#"):
         assert  0 < x <200
@@ -24,7 +26,7 @@ class Screen:
         
         
         self.array = [[fill for _ in range(self.x)] for _ in range(self.y)] 
-        # don't use this !!
+        # don't use this !! 
         #self.array=[fill]*self.x
         #self.array=[self.array]*self.y
     
@@ -44,7 +46,7 @@ class Screen:
        
     
     def end(self):
-        """moves Cursor below the Screen object"""
+        """moves Cursor below the Screen object to end up at a defined position"""
         escape =""
         for ydir in range(self.y+1):
             escape +="\033[B"
